@@ -41,12 +41,6 @@ class Game {
         });
     }
 
-    isPair() {
-        document.querySelectorAll('.selected').forEach(card => {
-            card.classList.add('pair');
-        });
-    }
-
     isVarious() {
         this.firstGuess = '';
         this.secondGuess = '';
@@ -71,7 +65,11 @@ class Game {
 
             if (this.firstGuess && this.secondGuess) {
                 if (this.firstGuess === this.secondGuess) {
-                    setTimeout(this.isPair(), this.delay);
+                    setTimeout(() => {
+                        document.querySelectorAll('.selected').forEach(card => {
+                            card.classList.add('pair');
+                        });
+                    }, this.delay);
                 }
                 setTimeout(this.isVarious.bind(this), this.delay);
             }
