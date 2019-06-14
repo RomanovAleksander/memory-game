@@ -3,10 +3,47 @@ h1 {
     text-align: center;
 }
 
+body {
+    background-image: url("./images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.btn {
+    position: fixed;
+    padding: 14px;
+    border: 2px solid lightgreen;
+    border-radius: 15px;
+    color: lightgreen;
+    background-color: #019BBA;;
+    top: 12%;
+    left: 15.4%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-restart {
+    position: fixed;
+    padding: 14px;
+    border: 2px solid lightcoral;
+    border-radius: 15px;
+    color: lightcoral;
+    background-color: #019BBA;
+    top: 12%;
+    right: 16%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .game {
     max-width: 790px;
     max-height: 1000px;
-    margin: 50px auto;
+    margin: 25px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -49,6 +86,41 @@ h1 {
 
 .pair .front {
     display: none;
+}
+
+@media (max-width : 1285px) {
+    body {
+        background-image: url("./images/bg1.jpg");
+    }
+}
+
+@media (max-width : 1221px) {
+    .btn {
+        left: 0 !important;
+        margin-left: 5px;
+    }
+    .btn-restart {
+        right: 0 !important;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width : 850px) {
+    .container {
+        position: relative;
+        height: 50px;
+        justify-content: space-around;
+    }
+    .btn {
+        position: relative !important;
+        top: 0;
+        left: 0;
+    }
+    .btn-restart {
+        position: relative !important;
+        top: 0;
+        right: 0;
+    }
 }
 
 @media screen and (max-width: 661px) {
